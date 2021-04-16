@@ -8,7 +8,7 @@
 @section Scripts {
 
     <script>
-        let max_selection = 5;
+        let max_selection = 10;
         let selected_cards = [];
         let tarot;
         function draw() {
@@ -28,16 +28,25 @@
                 $("#cardModalLabel").text("UYARI")
                 $("#cardModal").modal('show');
             } else {
-                var card = tarot.cards.find(k => k.order_num == this.getAttribute("data-index"));
-                $("#selectedCard").empty();
-                $("#selectedCard").append(`<img src="${card.path}" height="300"/>`);
-                $("#cardModalLabel").text(card.card_name)
-                $("#cardModal").modal('show');
 
-                selected_cards.push(card);
-                $(".selectedCards").append(`<div class="cardItem">
-                        <img src="${card.path_tn}" data-index="${card.order_num}" height="100" class="cardItemContent"/>
+                var card = tarot.cards.find(k => k.order_num == this.getAttribute("data-index"));
+                if (selected_cards.find(p => p.order_num == card.order_num)) {
+                    $("#selectedCard").empty();
+                    $("#selectedCard").append(`<h5>Bu Kart Secilmis</h5>`);
+                    $("#cardModalLabel").text("UYARI")
+                    $("#cardModal").modal('show');
+                } else {
+                    $("#selectedCard").empty();
+                    $("#selectedCard").append(`<img src="${card.path}" height="300"/>`);
+                    $("#cardModalLabel").text(card.card_name)
+                    $("#cardModal").modal('show');
+
+                    $(this).attr("src", card.path);
+                    selected_cards.push(card);
+                    $(".selectedCards").append(`<div class="cardItem">
+                        <img src="${card.path}" data-index="${card.order_num}" height="100" class="cardItemContent"/>
                     </div>`);
+                }
             }
         })
         $(".selectedCards").on("click", ".cardItemContent", function () {

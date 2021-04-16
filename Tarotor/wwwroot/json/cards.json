@@ -2,554 +2,551 @@
 	"back_path":"/images/BackOfCards_01.jpg",
 	"back_path_tn":"/images/BackOfCards_01_tn.jpg",
 	"cards":[
-		{
-			"order_num":1,
-			"card_name":"Death",
-			"path":"/images/Major/Death.jpg",
-			"path_tn":"/images/Major/tn/Death_tn.jpg",
-			"deck":"major"
-		},
-		{
-			"order_num":2,
-			"card_name":"Judgement",
-			"path" : "/images/Major/Judgement.jpg",
-			"path_tn":"/images/Major/tn/Judgement_tn.jpg",
-			"deck":"major"
-		},
-		{
-			"order_num":3,
-			"card_name":"Justice",
-			"path" : "/images/Major/Justice.jpg",
-			"path_tn":"/images/Major/tn/Justice_tn.jpg",
-			"deck":"major"
-		},
-		{
-			"order_num":4,
-			"card_name":"Strength",
-			"path" : "/images/Major/Strength.jpg",
-			"path_tn":"/images/Major/tn/Strength_tn.jpg",
-			"deck":"major"
-		},
-		{
-			"order_num":5,
-			"card_name":"Temperance",
-			"path" : "/images/Major/Temperance.jpg",
-			"path_tn":"/images/Major/tn/Temperance_tn.jpg", 
-			"deck":"major"
-		},
-		{
-			"order_num":6,
-			"card_name":"The Chariot",
-			"path" : "/images/Major/TheChariot.jpg",
-			"path_tn":"/images/Major/tn/TheChariot_tn.jpg", 
-			"deck":"major"
-		},
-		{
-			"order_num":7,
-			"card_name":"The Devil",
-			"path" : "/images/Major/TheDevil.jpg",
-			"path_tn":"/images/Major/tn/TheDevil_tn.jpg", 
-			"deck":"major"
-		},
-		{
-			"order_num":8,
-			"card_name":"The Emperor",
-			"path" : "/images/Major/TheEmperor.jpg",
-			"path_tn":"/images/Major/tn/TheEmperor_tn.jpg", 
-			"deck":"major"
-		},
-		{
-			"order_num":9,
-			"card_name":"The Empress",
-			"path" : "/images/Major/TheEmpress.jpg",
-			"path_tn":"/images/Major/tn/TheEmpress_tn.jpg", 
-			"deck":"major"
-		},
-		{
-			"order_num":10,
-			"card_name":"The Fool",
-			"path" : "/images/Major/TheFool.jpg",
-			"path_tn":"/images/Major/tn/TheFool_tn.jpg",
-			"deck":"major"
-		},
-		{
-			"order_num":11,
-			"card_name":"The Hanged Man",
-			"path" : "/images/Major/TheHangedMan.jpg", 
-			"path_tn":"/images/Major/tn/TheHangedMan_tn.jpg",
-			"deck":"major"
-		},
-		{
-			"order_num":12,
-			"card_name":"The Hermit",
-			"path" : "/images/Major/TheHermit.jpg",
-			"path_tn":"/images/Major/tn/TheHermit_tn.jpg",
-			"deck":"major"
-		},
-		{
-			"order_num":13,
-			"card_name":"The Lovers",
-			"path" : "/images/Major/TheLovers.jpg",
-			"path_tn":"/images/Major/tn/TheLovers_tn.jpg",
-			"deck":"major"
-		},
-		{
-			"order_num":14,
-			"card_name":"The Magician",
-			"path" : "/images/Major/TheMagician.jpg",
-			"path_tn":"/images/Major/tn/TheMagician_tn.jpg",
-			"deck":"major"
-		},
-		{
-			"order_num":15,
-			"card_name":"The Moon",
-			"path" : "/images/Major/TheMoon.jpg",
-			"path_tn":"/images/Major/tn/TheMoon_tn.jpg",
-			"deck":"major"
-		},
-		{
-			"order_num":16,
-			"card_name":"The Pope",
-			"path" : "/images/Major/ThePope.jpg",
-			"path_tn":"/images/Major/tn/ThePope_tn.jpg",
-			"deck":"major"
-		},
-		{
-			"order_num":17,
-			"card_name":"The Popess",
-			"path" : "/images/Major/ThePopess.jpg",
-			"path_tn":"/images/Major/tn/ThePopess_tn.jpg",
-			"deck":"major" 
-		},
-		{
-			"order_num":18,
-			"card_name":"The Star",
-			"path" : "/images/Major/TheStar.jpg",
-			"path_tn":"/images/Major/tn/TheStar_tn.jpg",
-			"deck":"major"
-		},
-		{
-			"order_num":19,
-			"card_name":"The Sun",
-			"path" : "/images/Major/TheSun.jpg",
-			"path_tn":"/images/Major/tn/TheSun_tn.jpg",
-			"deck":"major"
-		},
-		{
-			"order_num":20,
-			"card_name":"The Tower",
-			"path" : "/images/Major/TheTower.jpg",
-			"path_tn":"/images/Major/tn/TheTower_tn.jpg",
-			"deck":"major"
-		},
-		{
-			"order_num":21,
-			"card_name":"The World",
-			"path" : "/images/Major/TheWorld.jpg",
-			"path_tn":"/images/Major/tn/TheWorld_tn.jpg",
-			"deck":"major"
-		},
-		{
-			"order_num":22,
-			"card_name":"Wheel Of Fortune",
-			"path" : "/images/Major/WheelOfFortune.jpg",
-			"path_tn":"/images/Major/tn/WheelOfFortune_tn.jpg",
-			"deck":"major"
-		},
-		{
-	 		"order_num":23,
-	 		"card_name":"Ace Of Coins",
-	 		"path":"/images/Minor/AceOfCoins.jpg",
-	 		"path_tn":"images/Minor/tn/AceOfCoins_tn.jpg",
-			"deck":"minor"
-	},
-	{
- 		"order_num":24,
- 		"card_name":"Ace Of Cups",
- 		"path":"/images/Minor/AceOfCups.jpg",
- 		"path_tn":"images/Minor/tn/AceOfCups_tn.jpg",
-		"deck":"minor"
-	},
-	{
- 		"order_num":25,
- 		"card_name":"Ace Of Swords",
- 		"path":"/images/Minor/AceOfSwords.jpg",
- 		"path_tn":"images/Minor/tn/AceOfSwords_tn.jpg",
-		"deck":"minor"
-	},
-	{
- 		"order_num":26,
- 		"card_name":"Ace Of Wands",
- 		"path":"/images/Minor/AceOfWands.jpg",
- 		"path_tn":"images/Minor/tn/AceOfWands_tn.jpg",
-		"deck":"minor"
-	},
-	{
- 		"order_num":27,
- 		"card_name":"Coins 03",
- 		"path":"/images/Minor/Coins03.jpg",
- 		"path_tn":"images/Minor/tn/Coins03_tn.jpg",
-		"deck":"minor"
-	},
-	{
- 		"order_num":28,
- 		"card_name":"Coins 02",
- 		"path":"/images/Minor/Coins_02.jpg",
- 		"path_tn":"images/Minor/tn/Coins_02_tn.jpg",
-		"deck":"minor"
-	},
-	{
- 		"order_num":29,
- 		"card_name":"Coins 04",
- 		"path":"/images/Minor/Coins_04.jpg",
- 		"path_tn":"images/Minor/tn/Coins_04_tn.jpg",
-		"deck":"minor"
-	},
-	{
- 		"order_num":30,
- 		"card_name":"Coins 05",
- 		"path":"/images/Minor/Coins_05.jpg",
- 		"path_tn":"images/Minor/tn/Coins_05_tn.jpg",
-		"deck":"minor"
-	},
-	{
- 		"order_num":31,
- 		"card_name":"Coins 06",
- 		"path":"/images/Minor/Coins_06.jpg",
- 		"path_tn":"images/Minor/tn/Coins_06_tn.jpg",
-		"deck":"minor"
-	},
-	{
- 		"order_num":32,
- 		"card_name":"Coins 07",
- 		"path":"/images/Minor/Coins_07.jpg",
- 		"path_tn":"images/Minor/tn/Coins_07_tn.jpg",
-		"deck":"minor"
-	},
-	{
- 		"order_num":33,
- 		"card_name":"Coins 08",
- 		"path":"/images/Minor/Coins_08.jpg",
- 		"path_tn":"images/Minor/tn/Coins_08_tn.jpg",
-		"deck":"minor"
-	},
-	{
- 		"order_num":34,
- 		"card_name":"Coins 09",
- 		"path":"/images/Minor/Coins_09.jpg",
- 		"path_tn":"images/Minor/tn/Coins_09_tn.jpg",
-		"deck":"minor"
-	},
-	{
- 		"order_num":35,
- 		"card_name":"Coins 10",
- 		"path":"/images/Minor/Coins_10.jpg",
- 		"path_tn":"images/Minor/tn/Coins_10_tn.jpg",
-		"deck":"minor"
-	},
-	{
- 		"order_num":36,
- 		"card_name":"Cups 02",
- 		"path":"/images/Minor/Cups_02.jpg",
- 		"path_tn":"images/Minor/tn/Cups_02_tn.jpg",
-		"deck":"minor"
-	},
-	{
- 		"order_num":37,
- 		"card_name":"Cups 03",
- 		"path":"/images/Minor/Cups_03.jpg",
- 		"path_tn":"images/Minor/tn/Cups_03_tn.jpg",
-		"deck":"minor"
-	},
-	{
- 		"order_num":38,
- 		"card_name":"Cups 04",
- 		"path":"/images/Minor/Cups_04.jpg",
- 		"path_tn":"images/Minor/tn/Cups_04_tn.jpg",
-		"deck":"minor"
-	},
-	{
- 		"order_num":39,
- 		"card_name":"Cups 05",
- 		"path":"/images/Minor/Cups_05.jpg",
- 		"path_tn":"images/Minor/tn/Cups_05_tn.jpg",
-		"deck":"minor"
-	},
-	{
- 		"order_num":40,
- 		"card_name":"Cups 06",
- 		"path":"/images/Minor/Cups_06.jpg",
- 		"path_tn":"images/Minor/tn/Cups_06_tn.jpg",
-		"deck":"minor"
-	},
-	{
- 		"order_num":41,
- 		"card_name":"Cups 07",
- 		"path":"/images/Minor/Cups_07.jpg",
- 		"path_tn":"images/Minor/tn/Cups_07_tn.jpg",
-		"deck":"minor"
-	},
-	{
- 		"order_num":42,
- 		"card_name":"Cups 08",
- 		"path":"/images/Minor/Cups_08.jpg",
- 		"path_tn":"images/Minor/tn/Cups_08_tn.jpg",
-		"deck":"minor"
-	},
-	{
- 		"order_num":43,
- 		"card_name":"Cups 09",
- 		"path":"/images/Minor/Cups_09.jpg",
- 		"path_tn":"images/Minor/tn/Cups_09_tn.jpg",
-		"deck":"minor"
-	},
-	{
- 		"order_num":44,
- 		"card_name":"Cups 10",
- 		"path":"/images/Minor/Cups_10.jpg",
- 		"path_tn":"images/Minor/tn/Cups_10_tn.jpg",
-		"deck":"minor"
-	},
-	{
- 		"order_num":45,
- 		"card_name":"King Of Coins",
- 		"path":"/images/Minor/KingOfCoins.jpg",
- 		"path_tn":"images/Minor/tn/KingOfCoins_tn.jpg",
-		"deck":"minor"
-	},
-	{
- 		"order_num":46,
- 		"card_name":"King Of Cups",
- 		"path":"/images/Minor/KingOfCups.jpg",
- 		"path_tn":"images/Minor/tn/KingOfCups_tn.jpg",
-		"deck":"minor"
-	},
-	{
- 		"order_num":47,
- 		"card_name":"King Of Swords",
- 		"path":"/images/Minor/KingOfSwords.jpg",
- 		"path_tn":"images/Minor/tn/KingOfSwords_tn.jpg",
-		"deck":"minor"
-	},
-	{
- 		"order_num":48,
- 		"card_name":"King Of Wands",
- 		"path":"/images/Minor/KingOfWands.jpg",
- 		"path_tn":"images/Minor/tn/KingOfWands_tn.jpg",
-		"deck":"minor"
-	},
-	{
- 		"order_num":49,
- 		"card_name":"Knight Of Coins",
- 		"path":"/images/Minor/KnightOfCoins.jpg",
- 		"path_tn":"images/Minor/tn/KnightOfCoins_tn.jpg",
-		"deck":"minor"
-	},
-	{
- 		"order_num":50,
- 		"card_name":"Knight Of Cups",
- 		"path":"/images/Minor/KnightOfCups.jpg",
- 		"path_tn":"images/Minor/tn/KnightOfCups_tn.jpg",
-		"deck":"minor"
-	},
-	{
- 		"order_num":51,
- 		"card_name":"Knight Of Swords",
- 		"path":"/images/Minor/KnightOfSwords.jpg",
- 		"path_tn":"images/Minor/tn/KnightOfSwords_tn.jpg",
-		"deck":"minor"
-	},
-	{
- 		"order_num":52,
- 		"card_name":"Knight Of Wands",
- 		"path":"/images/Minor/KnightOfWands.jpg",
- 		"path_tn":"images/Minor/tn/KnightOfWands_tn.jpg",
-		"deck":"minor"
-	},
-	{
- 		"order_num":53,
- 		"card_name":"Page Of Coins",
- 		"path":"/images/Minor/PageOfCoins.jpg",
- 		"path_tn":"images/Minor/tn/PageOfCoins_tn.jpg",
-		"deck":"minor"
-	},
-	{
- 		"order_num":54,
- 		"card_name":"Page Of Cups",
- 		"path":"/images/Minor/PageOfCups.jpg",
- 		"path_tn":"images/Minor/tn/PageOfCups_tn.jpg",
-		"deck":"minor"
-	},
-	{
- 		"order_num":55,
- 		"card_name":"Page Of Swords",
- 		"path":"/images/Minor/PageOfSwords.jpg",
- 		"path_tn":"images/Minor/tn/PageOfSwords_tn.jpg",
-		"deck":"minor"
-	},
-	{
- 		"order_num":56,
- 		"card_name":"Page Of Wands",
- 		"path":"/images/Minor/PageOfWands.jpg",
- 		"path_tn":"images/Minor/tn/PageOfWands_tn.jpg",
-		"deck":"minor"
-	},
-	{
- 		"order_num":57,
- 		"card_name":"Queen Of Coins",
- 		"path":"/images/Minor/QueenOfCoins.jpg",
- 		"path_tn":"images/Minor/tn/QueenOfCoins_tn.jpg",
-		"deck":"minor"
-	},
-	{
- 		"order_num":58,
- 		"card_name":"Queen Of Cups",
- 		"path":"/images/Minor/QueenOfCups.jpg",
- 		"path_tn":"images/Minor/tn/QueenOfCups_tn.jpg",
-		"deck":"minor"
-	},
-	{
- 		"order_num":59,
- 		"card_name":"Queen Of Swords",
- 		"path":"/images/Minor/QueenOfSwords.jpg",
- 		"path_tn":"images/Minor/tn/QueenOfSwords_tn.jpg",
-		"deck":"minor"
-	},
-	{
- 		"order_num":60,
- 		"card_name":"Queen Of Wands",
- 		"path":"/images/Minor/QueenOfWands.jpg",
- 		"path_tn":"images/Minor/tn/QueenOfWands_tn.jpg",
-		"deck":"minor"
-	},
-	{
- 		"order_num":61,
- 		"card_name":"Swords 02",
- 		"path":"/images/Minor/Swords_02.jpg",
- 		"path_tn":"images/Minor/tn/Swords_02_tn.jpg",
-		"deck":"minor"
-	},
-	{
- 		"order_num":62,
- 		"card_name":"Swords 03",
- 		"path":"/images/Minor/Swords_03.jpg",
- 		"path_tn":"images/Minor/tn/Swords_03_tn.jpg",
-		"deck":"minor"
-	},
-	{
- 		"order_num":63,
- 		"card_name":"Swords 04",
- 		"path":"/images/Minor/Swords_04.jpg",
- 		"path_tn":"images/Minor/tn/Swords_04_tn.jpg",
-		"deck":"minor"
-	},
-	{
- 		"order_num":64,
- 		"card_name":"Swords 05",
- 		"path":"/images/Minor/Swords_05.jpg",
- 		"path_tn":"images/Minor/tn/Swords_05_tn.jpg",
-		"deck":"minor"
-	},
-	{
- 		"order_num":65,
- 		"card_name":"Swords 06",
- 		"path":"/images/Minor/Swords_06.jpg",
- 		"path_tn":"images/Minor/tn/Swords_06_tn.jpg",
-		"deck":"minor"
-	},
-	{
- 		"order_num":66,
- 		"card_name":"Swords 07",
- 		"path":"/images/Minor/Swords_07.jpg",
- 		"path_tn":"images/Minor/tn/Swords_07_tn.jpg",
-		"deck":"minor"
-	},
-	{
- 		"order_num":67,
- 		"card_name":"Swords 08",
- 		"path":"/images/Minor/Swords_08.jpg",
- 		"path_tn":"images/Minor/tn/Swords_08_tn.jpg",
-		"deck":"minor"
-	},
-	{
- 		"order_num":68,
- 		"card_name":"Swords 09",
- 		"path":"/images/Minor/Swords_09.jpg",
- 		"path_tn":"images/Minor/tn/Swords_09_tn.jpg",
-		"deck":"minor"
-	},
-	{
- 		"order_num":69,
- 		"card_name":"Swords 10",
- 		"path":"/images/Minor/Swords_10.jpg",
- 		"path_tn":"images/Minor/tn/Swords_10_tn.jpg",
-		"deck":"minor"
-	},
-	{
- 		"order_num":70,
- 		"card_name":"Wands 02",
- 		"path":"/images/Minor/Wands_02.jpg",
- 		"path_tn":"images/Minor/tn/Wands_02_tn.jpg",
-		"deck":"minor"
-	},
-	{
- 		"order_num":71,
- 		"card_name":"Wands 03",
- 		"path":"/images/Minor/Wands_03.jpg",
- 		"path_tn":"images/Minor/tn/Wands_03_tn.jpg",
-		"deck":"minor"
-	},
-	{
- 		"order_num":72,
- 		"card_name":"Wands 04",
- 		"path":"/images/Minor/Wands_04.jpg",
- 		"path_tn":"images/Minor/tn/Wands_04_tn.jpg",
-		"deck":"minor"
-	},
-	{
- 		"order_num":73,
- 		"card_name":"Wands 05",
- 		"path":"/images/Minor/Wands_05.jpg",
- 		"path_tn":"images/Minor/tn/Wands_05_tn.jpg",
-		"deck":"minor"
-	},
-	{
- 		"order_num":74,
- 		"card_name":"Wands 06",
- 		"path":"/images/Minor/Wands_06.jpg",
- 		"path_tn":"images/Minor/tn/Wands_06_tn.jpg",
-		"deck":"minor"
-	},
-	{
- 		"order_num":75,
- 		"card_name":"Wands 07",
- 		"path":"/images/Minor/Wands_07.jpg",
- 		"path_tn":"images/Minor/tn/Wands_07_tn.jpg",
-		"deck":"minor"
-	},
-	{
- 		"order_num":76,
- 		"card_name":"Wands 08",
- 		"path":"/images/Minor/Wands_08.jpg",
- 		"path_tn":"images/Minor/tn/Wands_08_tn.jpg",
-		"deck":"minor"
-	},
-	{
- 		"order_num":77,
- 		"card_name":"Wands 09",
- 		"path":"/images/Minor/Wands_09.jpg",
- 		"path_tn":"images/Minor/tn/Wands_09_tn.jpg",
-		"deck":"minor"
-	},
-	{
- 		"order_num":78,
- 		"card_name":"Wands 10",
- 		"path":"/images/Minor/Wands_10.jpg",
- 		"path_tn":"images/Minor/tn/Wands_10_tn.jpg",
-		"deck":"minor"
-	}
-
-
-
-	]
+ {
+   "order_num": 78,
+   "card_name": "Joker",
+   "card_name_en": "The Fool",
+   "deck": "Major",
+   "path": "/images/newSet/O The Fool.png"
+ },
+ {
+   "order_num": 1,
+   "card_name": "Sihirbaz",
+   "card_name_en": "The Magician",
+   "deck": "Major",
+   "path": "/images/newSet/1 The Magician.png"
+ },
+ {
+   "order_num": 2,
+   "card_name": "Başrahibe",
+   "card_name_en": "The High Priestess",
+   "deck": "Major",
+   "path": "/images/newSet/2 The High Priestess.png"
+ },
+ {
+   "order_num": 3,
+   "card_name": "İmparatoriçe",
+   "card_name_en": "The Empress",
+   "deck": "Major",
+   "path": "/images/newSet/3 The Empress.png"
+ },
+ {
+   "order_num": 4,
+   "card_name": "İmparator",
+   "card_name_en": "The Emperor",
+   "deck": "Major",
+   "path": "/images/newSet/4 The Emperor.png"
+ },
+ {
+   "order_num": 5,
+   "card_name": "Din Adamı",
+   "card_name_en": "The Hierophant",
+   "deck": "Major",
+   "path": "/images/newSet/5 The Hierophant.png"
+ },
+ {
+   "order_num": 6,
+   "card_name": "Aşıklar",
+   "card_name_en": "The Lovers",
+   "deck": "Major",
+   "path": "/images/newSet/6 The Lovers.png"
+ },
+ {
+   "order_num": 7,
+   "card_name": "Araba",
+   "card_name_en": "The Chariot",
+   "deck": "Major",
+   "path": "/images/newSet/7 The Chariot.png"
+ },
+ {
+   "order_num": 8,
+   "card_name": "Güç",
+   "card_name_en": "Strength",
+   "deck": "Major",
+   "path": "/images/newSet/8 Strength.png"
+ },
+ {
+   "order_num": 9,
+   "card_name": "Ermiş",
+   "card_name_en": "The Hermit",
+   "deck": "Major",
+   "path": "/images/newSet/9 The Hermit.png"
+ },
+ {
+   "order_num": 10,
+   "card_name": "Kader Çarkı",
+   "card_name_en": "Wheel of Fortune",
+   "deck": "Major",
+   "path": "/images/newSet/10 Wheel of Fortune.png"
+ },
+ {
+   "order_num": 11,
+   "card_name": "Adalet",
+   "card_name_en": "Justice",
+   "deck": "Major",
+   "path": "/images/newSet/11 Justice.png"
+ },
+ {
+   "order_num": 12,
+   "card_name": "Asılmış Adam",
+   "card_name_en": "The Hanged Man",
+   "deck": "Major",
+   "path": "/images/newSet/12 The Hanged Man.png"
+ },
+ {
+   "order_num": 13,
+   "card_name": "Ölüm",
+   "card_name_en": "Death",
+   "deck": "Major",
+   "path": "/images/newSet/13 Death.png"
+ },
+ {
+   "order_num": 14,
+   "card_name": "Denge",
+   "card_name_en": "Temperance",
+   "deck": "Major",
+   "path": "/images/newSet/14 Temperance.png"
+ },
+ {
+   "order_num": 15,
+   "card_name": "Şeytan",
+   "card_name_en": "The Devil",
+   "deck": "Major",
+   "path": "/images/newSet/15 The Devil.png"
+ },
+ {
+   "order_num": 16,
+   "card_name": "Kule",
+   "card_name_en": "The Tower",
+   "deck": "Major",
+   "path": "/images/newSet/16 The Tower.png"
+ },
+ {
+   "order_num": 17,
+   "card_name": "Yıldız",
+   "card_name_en": "The Star",
+   "deck": "Major",
+   "path": "/images/newSet/17 The Star.png"
+ },
+ {
+   "order_num": 18,
+   "card_name": "Ay",
+   "card_name_en": "The Moon",
+   "deck": "Major",
+   "path": "/images/newSet/18 The Moon.png"
+ },
+ {
+   "order_num": 19,
+   "card_name": "Güneş",
+   "card_name_en": "The Sun",
+   "deck": "Major",
+   "path": "/images/newSet/19 The Sun.png"
+ },
+ {
+   "order_num": 20,
+   "card_name": "Mahkeme",
+   "card_name_en": "Judgement",
+   "deck": "Major",
+   "path": "/images/newSet/20 Judgement.png"
+ },
+ {
+   "order_num": 21,
+   "card_name": "Dünya",
+   "card_name_en": "The World",
+   "deck": "Major",
+   "path": "/images/newSet/21 The World.png"
+ },
+ {
+   "order_num": 22,
+   "card_name": "Asaların Ası",
+   "card_name_en": "Ace of Wands",
+   "deck": "Minor",
+   "path": "/images/newSet/22 Ace of Wands.png"
+ },
+ {
+   "order_num": 23,
+   "card_name": "Asaların İkilisi",
+   "card_name_en": "Two of Wands",
+   "deck": "Minor",
+   "path": "/images/newSet/23 Two of Wands.png"
+ },
+ {
+   "order_num": 24,
+   "card_name": "Asaların Üçlüsü",
+   "card_name_en": "Three of Wands",
+   "deck": "Minor",
+   "path": "/images/newSet/24 Three of Wands.png"
+ },
+ {
+   "order_num": 25,
+   "card_name": "Asaların Dörtlüsü",
+   "card_name_en": "Four of Wands",
+   "deck": "Minor",
+   "path": "/images/newSet/25 Four of Wands.png"
+ },
+ {
+   "order_num": 26,
+   "card_name": "Asaların Beşlisi",
+   "card_name_en": "Five of Wands",
+   "deck": "Minor",
+   "path": "/images/newSet/26 Five of Wands.png"
+ },
+ {
+   "order_num": 27,
+   "card_name": "Asaların Altılısı",
+   "card_name_en": "Six of Wands",
+   "deck": "Minor",
+   "path": "/images/newSet/27 Six of Wands.png"
+ },
+ {
+   "order_num": 28,
+   "card_name": "Asaların Yedilisi",
+   "card_name_en": "Seven of Wands",
+   "deck": "Minor",
+   "path": "/images/newSet/28 Seven of Wands.png"
+ },
+ {
+   "order_num": 29,
+   "card_name": "Asaların Sekizlisi",
+   "card_name_en": "Eight of Wands",
+   "deck": "Minor",
+   "path": "/images/newSet/29 Eight of Wands.png"
+ },
+ {
+   "order_num": 30,
+   "card_name": "Asaların Dokuzlusu",
+   "card_name_en": "Nine of Wands",
+   "deck": "Minor",
+   "path": "/images/newSet/30 Nine of Wands.png"
+ },
+ {
+   "order_num": 31,
+   "card_name": "Asaların Onlusu",
+   "card_name_en": "Ten of Wands",
+   "deck": "Minor",
+   "path": "/images/newSet/31 Ten of Wands.png"
+ },
+ {
+   "order_num": 32,
+   "card_name": "Asaların Uşağı",
+   "card_name_en": "Page Of Wands",
+   "deck": "Minor",
+   "path": "/images/newSet/32 Page Of Wands.png"
+ },
+ {
+   "order_num": 33,
+   "card_name": "Asaların Şövalyesi",
+   "card_name_en": "Knight of Wands",
+   "deck": "Minor",
+   "path": "/images/newSet/33 Knight of Wands.png"
+ },
+ {
+   "order_num": 34,
+   "card_name": "Asaların Kraliçesi",
+   "card_name_en": "Queen of Wands",
+   "deck": "Minor",
+   "path": "/images/newSet/34 Queen of Wands.png"
+ },
+ {
+   "order_num": 35,
+   "card_name": "Asaların Kralı",
+   "card_name_en": "King of Wands",
+   "deck": "Minor",
+   "path": "/images/newSet/35 King of Wands.png"
+ },
+ {
+   "order_num": 36,
+   "card_name": "Kupaların Ası",
+   "card_name_en": "Ace of Cups",
+   "deck": "Minor",
+   "path": "/images/newSet/36 Ace of Cups.png"
+ },
+ {
+   "order_num": 37,
+   "card_name": "Kupaların İkilisi",
+   "card_name_en": "Two of Cups",
+   "deck": "Minor",
+   "path": "/images/newSet/37 Two of Cups.png"
+ },
+ {
+   "order_num": 38,
+   "card_name": "Kupaların Üçlüsü",
+   "card_name_en": "Three of Cups",
+   "deck": "Minor",
+   "path": "/images/newSet/38 Three of Cups.png"
+ },
+ {
+   "order_num": 39,
+   "card_name": "Kupaların Dörtlüsü",
+   "card_name_en": "Four of Cups",
+   "deck": "Minor",
+   "path": "/images/newSet/39 Four of Cups.png"
+ },
+ {
+   "order_num": 40,
+   "card_name": "Kupaların Beşlisi",
+   "card_name_en": "Five of Cups",
+   "deck": "Minor",
+   "path": "/images/newSet/40 Five of Cups.png"
+ },
+ {
+   "order_num": 41,
+   "card_name": "Kupaların Altılısı",
+   "card_name_en": "Six of Cups",
+   "deck": "Minor",
+   "path": "/images/newSet/41 Six of Cups.png"
+ },
+ {
+   "order_num": 42,
+   "card_name": "Kupaların Yedilisi",
+   "card_name_en": "Seven of Cups",
+   "deck": "Minor",
+   "path": "/images/newSet/42 Seven of Cups.png"
+ },
+ {
+   "order_num": 43,
+   "card_name": "Kupaların Sekizlisi",
+   "card_name_en": "Eight of Cups",
+   "deck": "Minor",
+   "path": "/images/newSet/43 Eight of Cups.png"
+ },
+ {
+   "order_num": 44,
+   "card_name": "Kupaların Dokuzlusu",
+   "card_name_en": "Nine of Cups",
+   "deck": "Minor",
+   "path": "/images/newSet/44 Nine of Cups.png"
+ },
+ {
+   "order_num": 45,
+   "card_name": "Kupaların Onlusu",
+   "card_name_en": "Ten of Cups",
+   "deck": "Minor",
+   "path": "/images/newSet/45 Ten of Cups.png"
+ },
+ {
+   "order_num": 46,
+   "card_name": "Kupaların Uşağı",
+   "card_name_en": "Page of Cups",
+   "deck": "Minor",
+   "path": "/images/newSet/46 Page of Cups.png"
+ },
+ {
+   "order_num": 47,
+   "card_name": "Kupaların Şövalyesi",
+   "card_name_en": "Knight of Cups",
+   "deck": "Minor",
+   "path": "/images/newSet/47 Knight of Cups.png"
+ },
+ {
+   "order_num": 48,
+   "card_name": "Kupaların Kraliçesi",
+   "card_name_en": "Queen of Cups",
+   "deck": "Minor",
+   "path": "/images/newSet/48 Queen of Cups.png"
+ },
+ {
+   "order_num": 49,
+   "card_name": "Kupaların Kralı",
+   "card_name_en": "King of Cups",
+   "deck": "Minor",
+   "path": "/images/newSet/49 King of Cups.png"
+ },
+ {
+   "order_num": 50,
+   "card_name": "Kılıçların Ası",
+   "card_name_en": "Ace of Swords",
+   "deck": "Minor",
+   "path": "/images/newSet/50 Ace of Swords.png"
+ },
+ {
+   "order_num": 51,
+   "card_name": "Kılıçların İkilisi",
+   "card_name_en": "Two of Swords",
+   "deck": "Minor",
+   "path": "/images/newSet/51 Two of Swords.png"
+ },
+ {
+   "order_num": 52,
+   "card_name": "Kılıçların Üçlüsü",
+   "card_name_en": "Three of Swords",
+   "deck": "Minor",
+   "path": "/images/newSet/52 Three of Swords.png"
+ },
+ {
+   "order_num": 53,
+   "card_name": "Kılıçların Dörtlüsü",
+   "card_name_en": "Four of Swords",
+   "deck": "Minor",
+   "path": "/images/newSet/53 Four of Swords.png"
+ },
+ {
+   "order_num": 54,
+   "card_name": "Kılıçların Beşlisi",
+   "card_name_en": "Five of Swords",
+   "deck": "Minor",
+   "path": "/images/newSet/54 Five of Swords.png"
+ },
+ {
+   "order_num": 55,
+   "card_name": "Kılıçların Altılısı",
+   "card_name_en": "Six of Swords",
+   "deck": "Minor",
+   "path": "/images/newSet/55 Six of Swords.png"
+ },
+ {
+   "order_num": 56,
+   "card_name": "Kılıçların Yedilisi",
+   "card_name_en": "Seven of Swords",
+   "deck": "Minor",
+   "path": "/images/newSet/56 Seven of Swords.png"
+ },
+ {
+   "order_num": 57,
+   "card_name": "Kılıçların Sekizlisi",
+   "card_name_en": "Eight of Swords",
+   "deck": "Minor",
+   "path": "/images/newSet/57 Eight of Swords.png"
+ },
+ {
+   "order_num": 58,
+   "card_name": "Kılıçların Dokuzlusu",
+   "card_name_en": "Nine of Swords",
+   "deck": "Minor",
+   "path": "/images/newSet/58 Nine of Swords.png"
+ },
+ {
+   "order_num": 59,
+   "card_name": "Kılıçların Onlusu",
+   "card_name_en": "Ten of Swords",
+   "deck": "Minor",
+   "path": "/images/newSet/59 Ten of Swords.png"
+ },
+ {
+   "order_num": 60,
+   "card_name": "Kılıçların Uşağı",
+   "card_name_en": "Page of Swords",
+   "deck": "Minor",
+   "path": "/images/newSet/60 Page of Swords.png"
+ },
+ {
+   "order_num": 61,
+   "card_name": "Kılıçların Şövalyesi",
+   "card_name_en": "Knight of Swords",
+   "deck": "Minor",
+   "path": "/images/newSet/61 Knight of Swords.png"
+ },
+ {
+   "order_num": 62,
+   "card_name": "Kılıçların Kraliçesi",
+   "card_name_en": "Queen of Swords",
+   "deck": "Minor",
+   "path": "/images/newSet/62 Queen of Swords.png"
+ },
+ {
+   "order_num": 63,
+   "card_name": "Kılıçların Kralı",
+   "card_name_en": "King of Swords",
+   "deck": "Minor",
+   "path": "/images/newSet/63 King of Swords.png"
+ },
+ {
+   "order_num": 64,
+   "card_name": "Tılsımların Ası",
+   "card_name_en": "Ace of Pentacles",
+   "deck": "Minor",
+   "path": "/images/newSet/64 Ace of Pentacles.png"
+ },
+ {
+   "order_num": 65,
+   "card_name": "Tılsımların İkilisi",
+   "card_name_en": "Two of Pentacles",
+   "deck": "Minor",
+   "path": "/images/newSet/65 Two of Pentacles.png"
+ },
+ {
+   "order_num": 66,
+   "card_name": "Tılsımların Üçlüsü",
+   "card_name_en": "Three of Pentacles",
+   "deck": "Minor",
+   "path": "/images/newSet/66 Three of Pentacles.png"
+ },
+ {
+   "order_num": 67,
+   "card_name": "Tılsımların Dörtlüsü",
+   "card_name_en": "Four of Pentacles",
+   "deck": "Minor",
+   "path": "/images/newSet/67 Four of Pentacles.png"
+ },
+ {
+   "order_num": 68,
+   "card_name": "Tılsımların Beşlisi",
+   "card_name_en": "Five of Pentacles",
+   "deck": "Minor",
+   "path": "/images/newSet/68 Five of Pentacles.png"
+ },
+ {
+   "order_num": 69,
+   "card_name": "Tılsımların Altılısı",
+   "card_name_en": "Six of Pentacles",
+   "deck": "Minor",
+   "path": "/images/newSet/69 Six of Pentacles.png"
+ },
+ {
+   "order_num": 70,
+   "card_name": "Tılsımların Yedilisi",
+   "card_name_en": "Seven of Pentacles",
+   "deck": "Minor",
+   "path": "/images/newSet/70 Seven of Pentacles.png"
+ },
+ {
+   "order_num": 71,
+   "card_name": "Tılsımların Sekizlisi",
+   "card_name_en": "Eight of Pentacles",
+   "deck": "Minor",
+   "path": "/images/newSet/71 Eight of Pentacles.png"
+ },
+ {
+   "order_num": 72,
+   "card_name": "Tılsımların Dokuzlusu",
+   "card_name_en": "Nine of Pentacles",
+   "deck": "Minor",
+   "path": "/images/newSet/72 Nine of Pentacles.png"
+ },
+ {
+   "order_num": 73,
+   "card_name": "Tılsımların Onlusu",
+   "card_name_en": "Ten of Pentacles",
+   "deck": "Minor",
+   "path": "/images/newSet/73 Ten of Pentacles.png"
+ },
+ {
+   "order_num": 74,
+   "card_name": "Tılsımların Uşağı",
+   "card_name_en": "Page of Pentacles",
+   "deck": "Minor",
+   "path": "/images/newSet/74 Page of Pentacles.png"
+ },
+ {
+   "order_num": 75,
+   "card_name": "Tılsımların Şövalyesi",
+   "card_name_en": "Knight of Pentacles",
+   "deck": "Minor",
+   "path": "/images/newSet/75 Knight of Pentacles.png"
+ },
+ {
+   "order_num": 76,
+   "card_name": "Tılsımların Kraliçesi",
+   "card_name_en": "Queen of Pentacles",
+   "deck": "Minor",
+   "path": "/images/newSet/76 Queen of Pentacles.png"
+ },
+ {
+   "order_num": 77,
+   "card_name": "Tılsımların Kralı",
+   "card_name_en": "King of Pentacles",
+   "deck": "Minor",
+   "path": "/images/newSet/77 King of Pentacles.png"
+ }
+]
 }
