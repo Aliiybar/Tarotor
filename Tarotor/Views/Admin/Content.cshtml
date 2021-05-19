@@ -1,0 +1,26 @@
+@model ContentEntry
+
+@{
+    ViewBag.Title = "title";
+    Layout = "_LayoutAdmin";
+}
+
+<h2>title</h2>
+	<div id="editor"></div>
+@section Scripts {
+	<script src="/ckeditor5/ckeditor.js"></script>
+	<script>
+	ClassicEditor
+		.create( document.querySelector( '#editor' ), {
+			// toolbar: [ 'heading', '|', 'bold', 'italic', 'link' ]
+		} )
+		.then( editor => {
+			window.editor = editor;
+		} )
+		.catch( err => {
+			console.error( err.stack );
+		} );
+	//editor.setData( '<p>Some text.</p>' );
+	//const data = editor.getData();
+	</script>
+}

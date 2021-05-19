@@ -3,32 +3,101 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="Tarot, Fal, Aşk, Gelecek, Enki, EnkiTarot, Online">
+    <meta name="description" content="Enki Tarot, online tarot falı.">
     <title>@ViewData["Title"] - Tarotor</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+
+    <link rel="stylesheet" href="~/css/navbar-bootstrap.css" />
+    <!-- Loading Template CSS -->
+    <link rel="stylesheet" href="~/css/style.css" />
+    <link rel="stylesheet" href="~/css/animate.css" />
+    <link rel="stylesheet" href="~/css/style-magnific-popup.css" />
     <link rel="stylesheet" href="~/css/site.css" />
+
+    <!-- Fonts -->
+    <link rel="stylesheet" href="~/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="~/css/icons-main.css" />
+    <link rel="stylesheet" href="~/css/icons-helper.css" />
+
+    <!-- RS5.0 Main Stylesheet -->
+    <link rel="stylesheet" type="text/css" href="~/revolution/css/settings.css">
+
+    <!-- RS5.0 Layers and Navigation Styles -->
+    <link rel="stylesheet" type="text/css" href="~/revolution/css/layers.css">
+    <link rel="stylesheet" type="text/css" href="~/revolution/css/navigation.css">
+
+    <!-- RS5.0 Main Stylesheet -->
+    <link rel="stylesheet" type="text/css" href="~/revolution/css/settings.css">
+
+    <!-- RS5.0 Layers and Navigation Styles -->
+    <link rel="stylesheet" type="text/css" href="~/revolution/css/layers.css">
+    <link rel="stylesheet" type="text/css" href="~/revolution/css/navigation.css">
+
+    <!-- Google Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Tangerine:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,400italic,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+
+    <!-- Font Favicon -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 </head>
 <body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-black border-bottom box-shadow mb-3">
+    <!--begin loader -->
+    <div id="loader">
+        <div class="sk-three-bounce">
+            <div class="sk-child sk-bounce1"></div>
+            <div class="sk-child sk-bounce2"></div>
+            <div class="sk-child sk-bounce3"></div>
+        </div>
+    </div>
+    <!--end loader -->
+    <!--begin header -->
+    <header class="header">
+
+        <!--begin nav -->
+        <nav class="navbar navbar-default navbar-fixed-top">
+
+            <!--begin container -->
             <div class="container">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Tarotor</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
+
+                <!--begin navbar -->
+                <div class="navbar-header">
+                    <button data-target="#navbar-collapse-02" data-toggle="collapse" class="navbar-toggle" type="button">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                    <a href="index.html" class="navbar-brand brand scrool">Enki Tarot</a>
+                </div>
+
+                <div id="navbar-collapse-02" class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="selected"><a href="index.html" localize-content>Home</a></li>
+                        <li><a href="#aboutus"><label id="aboutus">Hakkımızda</label></a></li>
+                      
+
+                        <li><a href="#contact">İletişim</a></li>
+
+                        <li class="social"><a href="#" class="first"><i class="fa fa-twitter"></i></a></li>
+                        <li class="social"><a href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li class="social"><a href="#" class="last"><i class="fa fa-instagram"></i></a></li>
+
                     </ul>
                 </div>
+                <!--end navbar -->
+
             </div>
+            <!--end container -->
+
         </nav>
+        <!--end nav -->
+
     </header>
+    <!--end header -->
+    
     <div class="container">
         <main role="main" class="pb-3">
             @RenderBody()
@@ -42,7 +111,35 @@
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/bootstrap-select.js"></script>
+    <script src="~/js/bootstrap-switch.js"></script>
+    <script src="~/js/jquery.magnific-popup.min.js"></script>
+    <script src="~/js/jquery.nav.js"></script>
+    <script src="~/js/jquery.scrollTo-min.js"></script>
+    <script src="~/js/SmoothScroll.js"></script>
+    <script src="~/js/wow.js"></script>
+    <!--
+    <script src="~/js/instafeed.js"></script>
+    <script src="~/js/instagram.js"></script>
+    -->
+    <!-- RS5.0 Core JS Files -->
+    <script type="text/javascript" src="~/revolution/js/jquery.themepunch.tools.min.js"></script>
+    <script type="text/javascript" src="~/revolution/js/jquery.themepunch.revolution.min.js"></script>
+
+    <script type="text/javascript" src="~/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
+    <script type="text/javascript" src="~/revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
+    <script type="text/javascript" src="~/revolution/js/extensions/revolution.extension.navigation.min.js"></script>
+    <script type="text/javascript" src="~/revolution/js/extensions/revolution.extension.actions.min.js"></script>
+    <script type="text/javascript" src="~/revolution/js/extensions/revolution.extension.carousel.min.js"></script>
+
+    <!-- begin custom script-->
+    <!---->
+    <script src="~/js/custom.js"></script>
+     
+    <script src="~/js/plugins.js"></script>
+
     <script src="~/js/site.js" asp-append-version="true"></script>
-    @RenderSection("Scripts", required: false)
+
+    @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

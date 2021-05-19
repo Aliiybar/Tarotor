@@ -1,0 +1,44 @@
+@model Settings
+
+@{
+    ViewBag.Title = _loc["Settings"];
+    Layout = "_LayoutAdmin";
+}
+
+<h2 localize-content>Settings</h2>
+
+@using (Html.BeginForm("Settings", "Admin", FormMethod.Post))
+{
+    <div class="form-row">
+        <div class="col">
+            @Html.LabelFor(model => model.DailyLimit)
+            @Html.TextBoxFor(model => model.DailyLimit, new { @class = "form-control", @placeholder = "Daily Limit"  })
+            @Html.ValidationMessageFor(model => model.DailyLimit)
+        </div>
+        <div class="col">
+            @Html.LabelFor(model => model.QuestionLimit)
+            @Html.TextBoxFor(model => model.QuestionLimit, new { @class = "form-control", @placeholder = "Daily Limit"  })
+            @Html.ValidationMessageFor(model => model.QuestionLimit)
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="col">
+            @Html.LabelFor(model => model.TarotPrice)
+            @Html.TextBoxFor(model => model.TarotPrice, new { @class = "form-control", @placeholder = "Daily Limit"  })
+            @Html.ValidationMessageFor(model => model.TarotPrice)
+        </div>
+        <div class="col">
+            @Html.LabelFor(model => model.QuestionsPrice)
+            @Html.TextBoxFor(model => model.QuestionsPrice, new { @class = "form-control", @placeholder = "Daily Limit"  })
+            @Html.ValidationMessageFor(model => model.QuestionsPrice)
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="col">
+            @Html.LabelFor(model => model.SelectionCardCount)
+            @Html.TextBoxFor(model => model.SelectionCardCount, new { @class = "form-control", @placeholder = "Daily Limit"  })
+            @Html.ValidationMessageFor(model => model.SelectionCardCount)
+        </div>
+        <div class="col"></div>
+    </div>
+}

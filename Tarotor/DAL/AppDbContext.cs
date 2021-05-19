@@ -7,6 +7,8 @@ namespace Tarotor.DAL
 {
     public class AppDbContext : IdentityDbContext<User, Role, Guid>
     {
+        public DbSet<Template> Template { get; set; } 
+        public DbSet<Smtp> Smtp { get; set; } 
         public AppDbContext(DbContextOptions<AppDbContext> options)
             : base(options)
         {

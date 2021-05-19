@@ -1,0 +1,82 @@
+@model TemplateVM
+
+@{
+    ViewBag.Title = _loc["Template"];
+    Layout = "_LayoutAdmin";
+}
+
+<h2  localize-content>Template </h2>
+@if (ViewBag.Success != null && ViewBag.Success)
+{
+    <div class="card bg-success text-white shadow">
+        <div class="card-body" localize-content>
+            Saved Successfuly
+            <div class="text-white-50 small" localize-content>Template  saved successfully</div>
+        </div>
+    </div>
+}
+@using (Html.BeginForm("Template", "Admin", FormMethod.Post, new { id = "myForm"}))
+{
+    @Html.HiddenFor(model=>model.Id)
+    @Html.HiddenFor(model=>model.TemplateBody)
+    <div class="form-row">
+        <div class="col">
+            @Html.LabelFor(model => model.TemplateName)
+            @Html.TextBoxFor(model => model.TemplateName, new { @class = "form-control", @placeholder = "Template Name"  })
+            @Html.ValidationMessageFor(model => model.TemplateName)
+        </div>
+    </div>
+ 
+    <div class="form-row">
+        <div class="col">
+            @Html.LabelFor(model => model.Language)
+            @Html.DropDownListFor(model => model.Language, 
+             Model.LanguageList,
+             "Please select",new { @class = "form-control" })
+           
+            @Html.ValidationMessageFor(model => model.Language)
+        </div>
+    </div>
+    <div class="form-row">     
+        <div class="col">
+            <label>Template Body</label>
+            <div class="col" id="editor" style="height: 400px; width: 100%;">
+
+            </div>
+        </div>
+    </div>
+   
+    <div class="form-row]" style="margin-top: 20px;">
+        <div class="col">
+            <input type="button" class="btn btn-primary" value="Save"  onclick="PostData()" localize-content/> 
+            
+        </div>
+    </div>
+}
+
+
+@section Scripts {
+    <script src="/ckeditor5/ckeditor.js"></script>
+    
+    <script>
+	ClassicEditor
+		.create( document.querySelector( '#editor' ), {
+			// toolbar: [ 'heading', '|', 'bold', 'italic', 'link' ]
+		} )
+		.then( editor => {
+			window.editor = editor;
+			editor.setData( '@Html.Raw(Model.TemplateBody)' );
+		} )
+		.catch( err => {
+			console.error( err.stack );
+		} );
+	
+	//const data = editor.getData();
+	
+	function PostData(){
+	   $('#TemplateBody').val(editor.getData());
+	   $("#myForm").submit();
+	}
+	</script>
+}
+

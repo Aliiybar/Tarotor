@@ -85,4 +85,5 @@ function getCardData() {
     });
 }
 
-getCardData();</script >
+getCardData();
+

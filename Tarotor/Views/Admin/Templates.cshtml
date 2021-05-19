@@ -1,0 +1,44 @@
+@model System.Collections.Generic.List<Tarotor.Models.TemplateVM>
+ 
+@{
+    ViewBag.Title = _loc["Templates"];
+    Layout = "_LayoutAdmin";
+}
+@section Head
+{
+    
+     <link href="/admin/vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet" type="text/css">
+    
+}
+<h2  localize-content>Templates</h2>
+<table id="templates"
+      
+       data-show-multi-sort="true"
+       class="table-light">
+    <thead>
+    <tr>
+        <th data-field="templateName" data-sortable="true" data-formatter="LinkFormatter">Template Name</th>
+        <th data-field="language" data-sortable="true">Language</th>
+        </tr>
+    </thead>
+</table>
+
+@section Scripts
+{
+    <script src="https://unpkg.com/bootstrap-table@1.18.3/dist/bootstrap-table.min.js"></script>
+    <script>
+    var data = @Html.Raw(Json.Serialize(@Model));
+    $(function() {
+       $('#templates').bootstrapTable ({data: data});
+    });
+    
+    function LinkFormatter(value, row, index){
+     return "<a style='cursor:pointer;' onclick='gotoTemplate(\"" + row.id + "\")'>" + value + "</a>";    
+    }
+    
+    function gotoTemplate(id){
+        window.location.href = window.location.href.slice(0, -1) + "?id=" + id;
+    }
+    
+    </script>
+}

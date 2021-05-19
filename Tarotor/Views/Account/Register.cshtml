@@ -1,0 +1,53 @@
+@model Register
+@{
+    ViewData["Title"] = _loc["Registration Form"];
+    var maxDate = (DateTime.Now.Year - 5) + "-01-01";
+}
+<div class="standardBody">
+    <h1>@ViewData["Title"]</h1>
+
+    <p localize-content>You don't have to write your details every time if you register. It's easy. </p>
+    
+    @using (Html.BeginForm("Register", "Account", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+        @Html.AntiForgeryToken()
+        <div class="form-group">
+            @Html.LabelFor(model => model.FirstName)
+            @Html.TextBoxFor(model => model.FirstName, new { @class = "form-control", @placeholder = @_loc["First Name"]  })
+            @Html.ValidationMessageFor(model => model.FirstName)
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.Email)
+            @Html.TextBoxFor(model => model.Email, new { @class = "form-control", @placeholder = @_loc["Email"]  })
+            @Html.ValidationMessageFor(model => model.Email)
+        </div>
+        <div class="form-group"> 
+            @Html.LabelFor(model => model.Password)
+            @Html.PasswordFor(model => model.Password, new { @class = "form-control", @placeholder = @_loc["Password"]  })
+            @Html.ValidationMessageFor(model => model.Password)
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.Birthdate)
+            <input type="date" class="form-control" id="Birthdate" name="Birthdate" max=@maxDate />
+            @Html.ValidationMessageFor(model => model.Birthdate)
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.File, new {@class="btn btn-secondary btn-block btn-outlined"})
+            @Html.TextBoxFor(m => m.File, new { @class = "form-control-file", accept="image/png, image/jpeg, image/jpg", type = "file", @style="display: none"})
+            @Html.ValidationMessageFor(model => model.File) 
+            <div id="photoFile"></div>
+        </div>
+        <div class="form-group"  localize-content>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+    }
+</div>
+@section Scripts {
+  <script>
+      $("#File").change(function() {
+      filename = this.files[0].name
+      $("#photoFile").text(filename); 
+   
+  });
+  </script>   
+}

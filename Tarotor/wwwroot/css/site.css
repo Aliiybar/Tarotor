@@ -65,6 +65,7 @@ body {
   /* Margin bottom by footer height */
   margin-bottom: 60px;
   background-color:black;
+    color:#ddd;
 }
 .footer {
   position: absolute;
@@ -90,3 +91,15 @@ body {
     order: 5; /* default is 0 */
     padding:5px;
 }
+.standardBody{
+    margin-top: 80px;
+}
+
+h1,h2,h3,h4,h5,p{
+    color:#eee;
+}
+
+.navbar-fixed-top {
+    background-color: #000 !important;
+}
+

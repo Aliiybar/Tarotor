@@ -7,8 +7,14 @@
   <ItemGroup>
     <Folder Include="DAL\" />
     <Folder Include="Entities\" />
+    <Folder Include="Pages" />
+    <Folder Include="wwwroot\revolution\" />
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="10.1.1" />
+    <PackageReference Include="LazZiya.ExpressLocalization" Version="5.0.0-beta2" />
+    <PackageReference Include="LazZiya.TagHelpers" Version="5.0.0" />
+    <PackageReference Include="MailKit" Version="2.12.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.5" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="5.0.5">
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
@@ -26,5 +32,27 @@
     <None Include="wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.js.map" />
     <None Include="wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js" />
     <None Include="wwwroot\lib\bootstrap\dist\js\bootstrap.min.js.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Update="LocalizationResources\ExpressLocalizationResource.tr.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ExpressLocalizationResource.tr.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="LocalizationResources\ViewLocalizationResource.tr.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ViewLocalizationResource.tr.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="LocalizationResources\ExpressLocalizationResource.tr.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>ExpressLocalizationResource.tr.resx</DependentUpon>
+    </Compile>
+    <Compile Update="LocalizationResources\ViewLocalizationResource.tr.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>ViewLocalizationResource.tr.resx</DependentUpon>
+    </Compile>
   </ItemGroup>
 </Project>

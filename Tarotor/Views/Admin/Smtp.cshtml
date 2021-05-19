@@ -1,0 +1,67 @@
+@using MailKit.Security
+@model SmtpVm
+
+@{
+    ViewBag.Title = _loc["Email Settings"];
+    Layout = "_LayoutAdmin";
+}
+
+<h2  localize-content>Email Settings</h2>
+@if (ViewBag.Success != null && ViewBag.Success)
+{
+    <div class="card bg-success text-white shadow">
+        <div class="card-body" localize-content>
+            Saved Successfuly
+            <div class="text-white-50 small" localize-content>Email settings saved successfully</div>
+        </div>
+    </div>
+}
+@using (Html.BeginForm("Smtp", "Admin", FormMethod.Post))
+{
+    @Html.HiddenFor(model=>model.Id)
+    <div class="form-row">
+        <div class="col">
+            @Html.LabelFor(model => model.Address)
+            @Html.TextBoxFor(model => model.Address, new { @class = "form-control", @placeholder = "SMTP Address"  })
+            @Html.ValidationMessageFor(model => model.Address)
+        </div>
+    </div>
+    <div class="form-row">    
+        <div class="col">
+            @Html.LabelFor(model => model.Port)
+            @Html.TextBoxFor(model => model.Port, new { @class = "form-control", @placeholder = "Port"  })
+            @Html.ValidationMessageFor(model => model.Port)
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="col">
+            @Html.LabelFor(model => model.SecureSocketOptions)
+            @Html.DropDownListFor(model => model.SecureSocketOptions, 
+             Html.GetEnumSelectList<SecureSocketOptions>(),
+             "Please select",new { @class = "form-control" })
+           
+            @Html.ValidationMessageFor(model => model.SecureSocketOptions)
+        </div>
+    </div>
+    <div class="form-row">     
+        <div class="col">
+            @Html.LabelFor(model => model.UserName)
+            @Html.TextBoxFor(model => model.UserName, new { @class = "form-control", @placeholder = "Username"  })
+            @Html.ValidationMessageFor(model => model.UserName)
+        </div>
+    </div>
+    <div class="form-row">    
+        <div class="col">
+            @Html.LabelFor(model => model.Password)
+            @Html.TextBoxFor(model => model.Password, new { @class = "form-control", @placeholder = "Password"  })
+            @Html.ValidationMessageFor(model => model.Password)
+        </div>
+   
+    </div>
+    <div class="form-row]" style="margin-top: 20px;">
+        <div class="col">
+            <input type="submit" class="btn btn-primary" value="Save"  localize-content/> 
+            
+        </div>
+    </div>
+}
