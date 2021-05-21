@@ -5,22 +5,22 @@ using Tarotor.Util;
 
 namespace Tarotor.Models
 {
-    public class TemplateVM
+    public class ContentVm
     {
-        public TemplateVM()
+        public ContentVm()
         {
             LanguageList = Lang.GetLanguages();
         }
         public string Id { get; set; }
         [Required]
-        [Display(Name = "Template Name")]
-        public string TemplateName { get; set; }
-        [Display(Name = "Subject")]
-        public string TemplateSubject { get; set; }
+        [Display(Name = "Content Name")]
+        public string ContentName { get; set; }
+        [Display(Name = "Content Title")]
+        public string ContentTitle { get; set; }
         [Display(Name = "Language")]
         public string Language { get; set; }
         public IEnumerable<SelectListItem> LanguageList { get;  }
-        [Display(Name = "Template Body")]
-        public string TemplateBody { get; set; }
+        [Display(Name = "Content Body")]
+        public string ContentBody { get; set; }
     }
 }

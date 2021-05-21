@@ -1,29 +1,29 @@
-@model TemplateVM
+@model ContentVm
 
 @{
-    ViewBag.Title = _loc["Template"];
+    ViewBag.Title = _loc["Content"];
     Layout = "_LayoutAdmin";
 }
 
-<h2  localize-content>Template </h2>
+<h2  localize-content>Content </h2>
 @if (ViewBag.Success != null && ViewBag.Success)
 {
     <div class="card bg-success text-white shadow">
         <div class="card-body" localize-content>
             Saved Successfuly
-            <div class="text-white-50 small" localize-content>Template  saved successfully</div>
+            <div class="text-white-50 small" localize-content>Content saved successfully</div>
         </div>
     </div>
 }
-@using (Html.BeginForm("Template", "Admin", FormMethod.Post, new { id = "myForm"}))
+@using (Html.BeginForm("SiteContent", "Admin", FormMethod.Post, new { id = "myForm"}))
 {
     @Html.HiddenFor(model=>model.Id)
-    @Html.HiddenFor(model=>model.TemplateBody)
+    @Html.HiddenFor(model=>model.ContentBody)
     <div class="form-row">
         <div class="col">
-            @Html.LabelFor(model => model.TemplateName)
-            @Html.TextBoxFor(model => model.TemplateName, new { @class = "form-control", @placeholder = "Template Name"  })
-            @Html.ValidationMessageFor(model => model.TemplateName)
+            @Html.LabelFor(model => model.ContentName)
+            @Html.TextBoxFor(model => model.ContentName, new { @class = "form-control", @placeholder = "Template Name"  })
+            @Html.ValidationMessageFor(model => model.ContentName)
         </div>
     </div>
  
@@ -39,14 +39,14 @@
     </div>
     <div class="form-row">
         <div class="col">
-            @Html.LabelFor(model => model.TemplateSubject)
-            @Html.TextBoxFor(model => model.TemplateSubject, new { @class = "form-control", @placeholder = "Template Name"  })
-            @Html.ValidationMessageFor(model => model.TemplateSubject)
+            @Html.LabelFor(model => model.ContentTitle)
+            @Html.TextBoxFor(model => model.ContentTitle, new { @class = "form-control", @placeholder = "Template Name"  })
+            @Html.ValidationMessageFor(model => model.ContentTitle)
         </div>
     </div>
     <div class="form-row">     
         <div class="col">
-            <label>Template Body</label>
+            <label localize-content>Content Body</label>
             <div class="col" id="editor" style="height: 400px; width: 100%;">
 
             </div>
@@ -72,7 +72,7 @@
 		} )
 		.then( editor => {
 			window.editor = editor;
-			editor.setData( '@Html.Raw(Model.TemplateBody)' );
+			editor.setData( '@Html.Raw(Model.ContentBody)' );
 		} )
 		.catch( err => {
 			console.error( err.stack );
@@ -81,7 +81,7 @@
 	//const data = editor.getData();
 	
 	function PostData(){
-	   $('#TemplateBody').val(editor.getData());
+	   $('#ContentBody').val(editor.getData());
 	   $("#myForm").submit();
 	}
 	</script>

@@ -1,11 +1,7 @@
 using System;
-using System.Collections.Generic;
 using System.Globalization;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -15,11 +11,8 @@ using Tarotor.DAL;
 using Tarotor.Entities;
 using LazZiya.ExpressLocalization;
 using Microsoft.AspNetCore.Localization;
-using Tarotor.DAL.Repositories.Smtp;
-using Tarotor.DAL.Repositories.Template;
 using Tarotor.LocalizationResources;
 using Tarotor.Models;
-using Tarotor.Services;
 
 
 namespace Tarotor
@@ -77,11 +70,10 @@ namespace Tarotor
                 });
             services.AddControllersWithViews();
             services.Configure<Secrets>(Configuration.GetSection("Secrets"));
-            services.AddScoped<ITemplateRepository, TemplateRepository>();
-            services.AddScoped<ISmtpRepository, SmtpRepository>();
+            // Dependencies
+            ConfigureIOT.ConfigureDependencies(services);
 
-            services.AddScoped<IEmailService, EmailService>();
-//Auto Mapper
+            //Auto Mapper
             var autoMapperConfig = new AutoMapper.MapperConfiguration(c =>
             {
                 c.AddProfile(new MappingProfile());
@@ -90,6 +82,7 @@ namespace Tarotor
             services.AddSingleton(mapper);
 
         }
+
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

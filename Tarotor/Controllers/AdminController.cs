@@ -1,7 +1,6 @@
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using MailKit.Security;
 using Microsoft.AspNetCore.Mvc;
 using Tarotor.Models;
 using Tarotor.Services;
@@ -11,10 +10,13 @@ namespace Tarotor.Controllers
     public class AdminController : _BaseController
     {
         private readonly IEmailService _emailService;
+        private readonly IContentManager _contentManager;
 
-        public AdminController(IEmailService emailService)
+        public AdminController(IEmailService emailService,
+            IContentManager contentManager)
         {
             _emailService = emailService;
+            _contentManager = contentManager;
         }
         private void SetAdminLayoutData()
         {
@@ -52,13 +54,27 @@ namespace Tarotor.Controllers
             return View(model);
         }
 
-        public IActionResult Content()
+        #region Content
+        public IActionResult Contents()
         {
             SetAdminLayoutData();
-            var model = new ContentEntry();
+            var model = _contentManager.GetContents();
             return View(model);
         }
-
+        
+        public  async Task<IActionResult> SiteContent(string id)
+        {
+            SetAdminLayoutData();
+            var model = new ContentVm();
+            if (string.IsNullOrWhiteSpace(id)) return View(model);
+            var content = await _contentManager.GetContentAsync(id);
+            if (content != null)
+            {
+                model = content;
+            }
+            return View(model);
+        }
+        #endregion
         #region SMTP
         public IActionResult Smtp()
         {
@@ -86,7 +102,7 @@ namespace Tarotor.Controllers
         #region Template
 
  
-        public async Task<IActionResult> Templates()
+        public  IActionResult Templates()
         {
             SetAdminLayoutData();
             var model =_emailService.GetTemplates();

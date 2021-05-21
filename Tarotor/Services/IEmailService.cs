@@ -10,7 +10,7 @@ namespace Tarotor.Services
     {
         Task<string> SaveTemplateAsync(TemplateVM templateVm);
         Task<TemplateVM> GetTemplateAsync(string templateId);
-        TemplateVM GetTemplateByName(string templateName);
+        TemplateVM GetTemplateByName(string templateName, string language);
         List<TemplateVM> GetTemplates();
         string Text2Template(string template, Dictionary<string, string> parameters);
         Task<string> SaveSmtpSettings(SmtpVm smtpVm);

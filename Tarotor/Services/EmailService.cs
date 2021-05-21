@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
@@ -8,6 +9,7 @@ using MailKit.Security;
 using Microsoft.Extensions.Options;
 using MimeKit;
 using MimeKit.Text;
+using MimeKit.Utils;
 using Tarotor.DAL.Repositories.Smtp;
 using Tarotor.DAL.Repositories.Template;
 using Tarotor.Entities;
@@ -43,6 +45,7 @@ namespace Tarotor.Services
 
             template.Id = id;
             template.TemplateName = templateVm.TemplateName;
+            template.TemplateSubject = templateVm.TemplateSubject;
             template.TemplateBody = templateVm.TemplateBody.Replace("'", "&apos;");
             template.Language = templateVm.Language;
             if (string.IsNullOrWhiteSpace(templateVm.Id))
@@ -71,11 +74,11 @@ namespace Tarotor.Services
             var templates =  _templateRepository.GetAll();
             return _mapper.Map<List<TemplateVM>>(templates);
         }
-        public TemplateVM GetTemplateByName(string templateName)
+        public TemplateVM GetTemplateByName(string templateName, string language = "tr")
         {
-            var templateCollection =  _templateRepository.FindBy(k=>k.TemplateName == templateName);
+            var templateCollection =  _templateRepository.FindBy(k=>k.TemplateName == templateName && k.Language == language);
             Template template = null;
-            if (templateCollection.Count() > 0)
+            if (templateCollection.Any())
             {
                 template = templateCollection.First();
             }
@@ -144,6 +147,7 @@ namespace Tarotor.Services
             return null;
         }
         
+        
         public async Task<MimeMessage> PrepareEmail(Email emailObj)
         {
             var email = new MimeMessage();
@@ -158,14 +162,25 @@ namespace Tarotor.Services
             }
             else if (!string.IsNullOrWhiteSpace(emailObj.TemplateName))
             {
-                var template = GetTemplateByName(emailObj.TemplateName);
+                var template = GetTemplateByName(emailObj.TemplateName, emailObj.Language);
                 mailBody = Text2Template(template.TemplateBody, emailObj.Parameters);
             }
            
-            email.Body = new TextPart(TextFormat.Html)
-            {
-                Text = mailBody
-            };
+            var builder = new BodyBuilder ();
+            string path = Directory.GetCurrentDirectory();
+            var pathImage =  path + "/wwwroot/logo.jpg";
+            var image = builder.LinkedResources.Add (pathImage);
+
+            image.ContentId = MimeUtils.GenerateMessageId ();
+
+            builder.HtmlBody = string.Format (@"<div><img src=""cid:{0}""></div>", image.ContentId);
+            builder.HtmlBody += mailBody;
+            
+            email.Body = builder.ToMessageBody ();
+            // email.Body = new TextPart(TextFormat.Html)
+            // {
+            //     Text = mailBody
+            // };
             return email;
         }
         public async Task Send(MimeMessage email)

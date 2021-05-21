@@ -11,6 +11,7 @@ namespace Tarotor.DAL
         
             CreateMap<SmtpVm, Smtp>().ReverseMap();
             CreateMap<TemplateVM, Template>().ReverseMap();
+            CreateMap<ContentVm, Content>().ReverseMap();
             //// Domain to Resource
             //CreateMap<Music, MusicResource>();
             //CreateMap<Artist, ArtistResource>();
