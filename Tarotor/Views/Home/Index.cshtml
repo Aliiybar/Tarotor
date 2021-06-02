@@ -1,5 +1,6 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
+﻿@model HomePageModel
+@{
+    ViewData["Title"] = _loc["Home Page"];
 }
 
 <!--begin home-hero-section -->
@@ -22,10 +23,7 @@
                     <div class="tp-caption tp-shape tp-shapewrapper " id="slide-672-layer-1" data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" data-y="['middle','middle','middle','middle']" data-voffset="['0','0','0','0']" data-width="full" data-height="full" data-whitespace="nowrap" data-transform_idle="o:1;" data-transform_in="opacity:0;s:1000;e:Power2.easeInOut;" data-transform_out="opacity:0;s:1000;s:1000;" data-start="0" data-basealign="slide" data-responsive_offset="off" data-responsive="off" style="z-index: 5;background-color:rgba(0, 0, 0, 0.35);border-color:rgba(0, 0, 0, 0);">
                     </div>
 
-                    <!-- LAYER NR. 2 -->
-                    <div class="tp-caption Concept-SubTitle   tp-resizeme" id="slide-674-layer-15" data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" data-y="['middle','middle','middle','middle']" data-voffset="['-105','-105','-97','-114']" data-width="none" data-height="none" data-whitespace="nowrap" data-transform_idle="o:1;" data-transform_in="z:0;rX:0;rY:0;rZ:0;sX:0.9;sY:0.9;skX:0;skY:0;opacity:0;s:1500;e:Power3.easeInOut;" data-transform_out="x:left(R);s:1000;e:Power3.easeIn;s:1000;e:Power3.easeIn;" data-start="1500" data-splitin="none" data-splitout="none" data-responsive_offset="on" style="z-index: 6; white-space: nowrap;font-style:italic;">
-                        <img src="images/logo2.png" alt="" width="50%" data-no-retina>
-                    </div>
+         
 
                     <!-- LAYER NR. 3 -->
                     <div class="tp-caption Concept-SubTitle   tp-resizeme" id="slide-672-layer-4" data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" data-y="['middle','middle','middle','middle']" data-voffset="['115','115','107','104']" data-fontsize="['28','28','20','20']" data-lineheight="['28','28','20','20']" data-width="none" data-height="none" data-whitespace="nowrap" data-transform_idle="o:1;" data-transform_in="z:0;rX:0;rY:0;rZ:0;sX:0.9;sY:0.9;skX:0;skY:0;opacity:0;s:1500;e:Power3.easeInOut;" data-transform_out="x:left(R);s:1000;e:Power3.easeIn;s:1000;e:Power3.easeIn;" data-start="1500" data-splitin="none" data-splitout="none" data-responsive_offset="on" style="z-index: 6; white-space: nowrap;font-style:italic;">
@@ -33,7 +31,7 @@
                     </div>
 
                     <!-- LAYER NR. 4 -->
-                    <div class="tp-caption Concept-Title   tp-resizeme" id="slide-672-layer-2" data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" data-y="['middle','middle','middle','middle']" data-voffset="['50','50','50','50']" data-fontsize="['70','70','50','40']" data-lineheight="['70','70','50','40']" data-width="['none','none','none','400']" data-height="none" data-whitespace="['nowrap','nowrap','nowrap','normal']" data-transform_idle="o:1;" data-transform_in="z:0;rX:0;rY:0;rZ:0;sX:0.9;sY:0.9;skX:0;skY:0;opacity:0;s:1500;e:Power3.easeInOut;" data-transform_out="x:left(R);s:1000;e:Power3.easeIn;s:1000;e:Power3.easeIn;" data-start="1700" data-splitin="none" data-splitout="none" data-responsive_offset="on" style="z-index: 7; white-space: nowrap;text-align:center;">
+                    <div class="tp-caption Concept-Title   tp-resizeme" id="slide-672-layer-2" data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" data-y="['middle','middle','middle','middle']" data-voffset="['50','50','50','50']" data-fontsize="['70','70','50','40']" data-lineheight="['70','70','50','40']" data-width="['none','none','none','400']" data-height="none" data-whitespace="['nowrap','nowrap','nowrap','normal']" data-transform_idle="o:1;" data-transform_in="z:0;rX:0;rY:0;rZ:0;sX:0.9;sY:0.9;skX:0;skY:0;opacity:0;s:1500;e:Power3.easeInOut;" data-transform_out="x:left(R);s:1000;e:Power3.easeIn;s:1000;e:Power3.easeIn;" data-start="1700" data-splitin="none" data-splitout="none" data-responsive_offset="on" style="z-index: 7; white-space: nowrap;text-align:center;" localize-content>
                         HOŞGELDİNİZ
                     </div>
 
@@ -64,21 +62,19 @@
             <!--begin col-md-6-->
             <div class="col-md-6 text-center padding-top-50 padding-bottom-50 wow slideInLeft">
 
-                <span class="comic-text">Nasıl</span>
+                <span class="comic-text"  localize-content>@Model.HowItWorks.ContentTitle</span>
 
                 <h2 class="section-title" id="aboutus"></h2>
 
-                <p>
-                    Önce 'Aşk' veya 'Genel' tarot türlerinden birini seçiyorsunuz.
-                    <br/>
-                    Ekstra sormak istedikleriniz varsa, bunu belirtiyorsunuz
-                    <br/>
-                    Günlük kota dolmadıysa 
+                <p class="color-black">@Html.Raw(Model.HowItWorks.ContentBody)
                 </p>
+                <div class="col-md-12">
+                    
+                    <input  localize-content value="Start" id="submit-button" class="register-submit" type="button"/>
+                </div>
 
 
-
-            </div>x
+            </div>
             <!--end col-md-6-->
             <!--begin col-md-6-->
             <div class="col-md-6 wow slideInRight">

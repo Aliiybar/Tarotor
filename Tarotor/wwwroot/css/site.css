@@ -102,4 +102,6 @@ h1,h2,h3,h4,h5,p{
 .navbar-fixed-top {
     background-color: #000 !important;
 }
-
+.cursor-pointer {
+    cursor: pointer;
+}

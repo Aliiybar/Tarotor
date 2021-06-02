@@ -69,6 +69,8 @@ namespace Tarotor
                     options.LogoutPath = "Account/logout";
                 });
             services.AddControllersWithViews();
+            services.Configure<DataProtectionTokenProviderOptions>(opt =>
+                opt.TokenLifespan = TimeSpan.FromHours(2));
             services.Configure<Secrets>(Configuration.GetSection("Secrets"));
             // Dependencies
             ConfigureIOT.ConfigureDependencies(services);
@@ -106,6 +108,9 @@ namespace Tarotor
 
             app.UseEndpoints(endpoints =>
             {
+                endpoints.MapControllerRoute(
+                    name: "tarot",
+                    pattern: "{culture=en}/{controller=Home}/{action}");
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{culture=en}/{controller=Home}/{action=Index}/{id?}");

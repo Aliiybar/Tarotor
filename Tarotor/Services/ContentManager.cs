@@ -50,9 +50,13 @@ namespace Tarotor.Services
         {
             var content = new Content();
             var id = contentVm.Id;
-            if (string.IsNullOrWhiteSpace(content.Id))
+            if (string.IsNullOrWhiteSpace(contentVm.Id))
             {
                 id = Guid.NewGuid().ToString();
+            }
+            else
+            {
+               content = await _contentRepository.GetAsync(id);
             }
 
             content.Id = id;

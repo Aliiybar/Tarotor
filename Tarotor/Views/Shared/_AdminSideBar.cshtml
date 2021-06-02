@@ -77,19 +77,19 @@
                 <a class="nav-link" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true"
                     aria-controls="collapsePages">
                     <i class="fas fa-fw fa-folder"></i>
-                    <span localize-content>Pages</span>
+                    <span localize-content>Site Contents</span>
                 </a>
                 <div id="collapsePages" class="collapse" aria-labelledby="headingPages"
                     data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header" localize-content>Login Screens:</h6>
-                        <a class="collapse-item" href="login.html" localize-content>Login</a>
-                        <a class="collapse-item" href="register.html" localize-content>Register</a>
-                        <a class="collapse-item" href="forgot-password.html" localize-content>Forgot Password</a>
+                        <h6 class="collapse-header" localize-content>Contents</h6>
+                        @Html.ActionLink("Templates", "Templates", "Admin", new object { },
+                                                    new { @class = "collapse-item"})
                         <div class="collapse-divider"></div>
-                        <h6 class="collapse-header" localize-content>Other Pages:</h6>
-                        <a class="collapse-item" href="404.html" localize-content>404 Page</a>
-                        <a class="collapse-item active" href="blank.html" localize-content>Blank Page</a>
+                        @Html.ActionLink("Contents", "SiteContents", "Admin", new object { },
+                                                                            new { @class = "collapse-item"})
+                        @Html.ActionLink("Social Media", "Social", "Admin", new object { },
+                                                                                                    new { @class = "collapse-item"})
                     </div>
                 </div>
             </li>

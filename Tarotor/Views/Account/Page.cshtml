@@ -1,0 +1,10 @@
+@model ContentVm
+
+@{
+ Layout = "_Layout";
+}
+
+<div class="standardBody">
+    <h2>@Html.Raw(Model.ContentTitle)</h2>
+    <p>@Html.Raw(Model.ContentBody)</p>
+</div>

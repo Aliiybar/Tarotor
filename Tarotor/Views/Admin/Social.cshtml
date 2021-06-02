@@ -1,0 +1,59 @@
+@model SocialMediaVm
+
+@{
+    ViewBag.Title = "Social Media";
+    Layout = "_LayoutAdmin";
+}
+
+<h2>Social Media Links</h2>
+
+@if (ViewBag.Success != null && ViewBag.Success)
+{
+    <div class="card bg-success text-white shadow">
+        <div class="card-body" localize-content>
+            Saved Successfuly
+            <div class="text-white-50 small" localize-content>Email settings saved successfully</div>
+        </div>
+    </div>
+}
+@using (Html.BeginForm("Social", "Admin", FormMethod.Post))
+{
+    @Html.HiddenFor(model=>model.Id)
+    <div class="form-row">
+        <div class="col">
+            @Html.LabelFor(model => model.Twitter)
+            @Html.TextBoxFor(model => model.Twitter, new { @class = "form-control", @placeholder = "Twitter"  })
+            @Html.ValidationMessageFor(model => model.Twitter)
+        </div>
+    </div>
+    <div class="form-row">    
+        <div class="col">
+            @Html.LabelFor(model => model.Facebook)
+            @Html.TextBoxFor(model => model.Facebook, new { @class = "form-control", @placeholder = "Facebook"  })
+            @Html.ValidationMessageFor(model => model.Facebook)
+        </div>
+    </div>
+  
+    <div class="form-row">     
+        <div class="col">
+            @Html.LabelFor(model => model.Instagram)
+            @Html.TextBoxFor(model => model.Instagram, new { @class = "form-control", @placeholder = "Instagram"  })
+            @Html.ValidationMessageFor(model => model.Instagram)
+        </div>
+    </div>
+    <div class="form-row">    
+        <div class="col">
+            @Html.LabelFor(model => model.Youtube)
+            @Html.TextBoxFor(model => model.Youtube, new { @class = "form-control", @placeholder = "Youtube"  })
+            @Html.ValidationMessageFor(model => model.Youtube)
+        </div>
+   
+    </div>
+    <div class="form-row]" style="margin-top: 20px;">
+        <div class="col">
+            <input type="submit" class="btn btn-primary" value="Save"  localize-content/> 
+            
+        </div>
+    </div>
+}
+

@@ -18,6 +18,12 @@ namespace Tarotor.Models
         [Display(Name = "Secure Socket Options")]
 
         public SecureSocketOptions SecureSocketOptions { get; set; }
+        
+        [ExRequired]
+        [Display(Name = "FromEmail")]
+        public string FromEmail { get; set; }
+        
+        
         [ExRequired]
         [Display(Name = "UserName")]
 

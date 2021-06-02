@@ -10,6 +10,14 @@ namespace Tarotor.DAL
         public DbSet<Content> Content { get; set; } 
         public DbSet<Template> Template { get; set; } 
         public DbSet<Smtp> Smtp { get; set; } 
+        public DbSet<Request> Request { get; set; } 
+        public DbSet<RequestProfile> RequestProfile { get; set; } 
+        public DbSet<Response> Response { get; set; } 
+        public DbSet<ResponseQuestion> ResponseQuestion { get; set; } 
+        public DbSet<ResponseQuestionAnswer> ResponseQuestionAnswer { get; set; } 
+        public DbSet<SelectedCard> SelectedCard { get; set; } 
+     
+        
         public AppDbContext(DbContextOptions<AppDbContext> options)
             : base(options)
         {

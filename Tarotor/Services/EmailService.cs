@@ -41,6 +41,9 @@ namespace Tarotor.Services
             if (string.IsNullOrWhiteSpace(templateVm.Id))
             {
                 id = Guid.NewGuid().ToString();
+            }            else
+            {
+                template = await _templateRepository.GetAsync(id);
             }
 
             template.Id = id;

@@ -37,10 +37,17 @@
         <div class="col">
             @Html.LabelFor(model => model.SecureSocketOptions)
             @Html.DropDownListFor(model => model.SecureSocketOptions, 
-             Html.GetEnumSelectList<SecureSocketOptions>(),
-             "Please select",new { @class = "form-control" })
+                Html.GetEnumSelectList<SecureSocketOptions>(),
+                "Please select",new { @class = "form-control" })
            
             @Html.ValidationMessageFor(model => model.SecureSocketOptions)
+        </div>
+    </div>
+    <div class="form-row">     
+        <div class="col">
+            @Html.LabelFor(model => model.FromEmail)
+            @Html.TextBoxFor(model => model.FromEmail, new { @class = "form-control", @placeholder = "From Email"  })
+            @Html.ValidationMessageFor(model => model.FromEmail)
         </div>
     </div>
     <div class="form-row">     

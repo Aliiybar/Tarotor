@@ -11,12 +11,15 @@ namespace Tarotor.Controllers
     {
         private readonly IEmailService _emailService;
         private readonly IContentManager _contentManager;
+        private readonly ISocialMediaManager _socialMediaManager;
 
         public AdminController(IEmailService emailService,
-            IContentManager contentManager)
+            IContentManager contentManager,
+            ISocialMediaManager socialMediaManager)
         {
             _emailService = emailService;
             _contentManager = contentManager;
+            _socialMediaManager = socialMediaManager;
         }
         private void SetAdminLayoutData()
         {
@@ -54,8 +57,34 @@ namespace Tarotor.Controllers
             return View(model);
         }
 
+        #region SocialMediaLinks
+        public IActionResult Social()
+        {
+            SetAdminLayoutData();
+             
+            var model = new SocialMediaVm();
+            var mediaLinks = _socialMediaManager.GetSocialMedia();
+            if (mediaLinks != null) model = mediaLinks;
+            return View(model);
+        }
+       
+        [HttpPost]
+        public async Task<IActionResult> Social(SocialMediaVm model)
+        {
+            SetAdminLayoutData();
+            if (ModelState.IsValid)
+            {
+                await _socialMediaManager.SaveSocialMedia(model);
+            }
+            ViewBag.Success = true;
+            return View(model);
+        }
+        
+
+        #endregion
+        
         #region Content
-        public IActionResult Contents()
+        public IActionResult SiteContents()
         {
             SetAdminLayoutData();
             var model = _contentManager.GetContents();
@@ -74,7 +103,21 @@ namespace Tarotor.Controllers
             }
             return View(model);
         }
+        
+        [HttpPost]
+        public async Task<IActionResult> SiteContent(ContentVm model)
+        {
+            var retVal = "";
+            SetAdminLayoutData();
+            if (ModelState.IsValid)
+            {
+                retVal = await  _contentManager.SaveContentAsync(model );
+            }
+            ViewBag.Success = true;
+            return RedirectToAction("SiteContent", "Admin", retVal);
+        }
         #endregion
+        
         #region SMTP
         public IActionResult Smtp()
         {

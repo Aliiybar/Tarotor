@@ -1,0 +1,129 @@
+@model TarotPageModel
+
+@{
+    ViewBag.Title = _loc["Tarot"];
+    Layout = "_Layout";
+}
+
+<section class="section-black small-padding no-padding-bottom">
+    
+	<!--begin container-->
+	<div class="container"> 
+
+		<!--begin row-->
+		<div class="row">
+            
+			<!--begin col-md-6-->
+               
+			<div class="col-md-6 wow bounceInUp">
+                
+				<img src="https://source.unsplash.com/800x1000/?tarot" alt="picture" class="width-100">
+                
+			</div>
+			<!--end col-md-6-->
+                
+			<!--begin col-md-6-->
+			<div class="col-md-6 text-center register-inner padding-top-100">
+            
+				<span class="comic-text" localize-content>Tarot Selection</span>
+                    
+				<h2></h2>
+				<p localize-content>Please select the options below </p>                
+				<!--begin selection form -->
+				@using (Html.BeginForm("tarot", "home", FormMethod.Post))
+				{
+					<div asp-validation-summary="All" class="text-danger"></div>
+					@Html.AntiForgeryToken()
+					<!--begin col-md-12-->
+					<div class="col-md-12">
+						@Html.LabelFor(k=>k.TarotTypeSelected)
+						@Html.DropDownListFor(k => k.TarotTypeSelected,
+							new SelectList(Model.TarotTypes, "Key", "Value"),
+							"Select",
+							new {@class = "register-input white-input"})
+					</div>
+					<div class="col-md-12">
+						@Html.LabelFor(k=>k.QuestionSelected, new {@id="questionsLabel"})
+						@Html.DropDownListFor(k => k.QuestionSelected,
+							new SelectList(Model.YesNo, "Key", "Value"),
+							"Select",
+							new {@class = "register-input white-input"})
+					</div> 
+					<div class="col-md-12">
+						@Html.LabelFor(k=>k.CardsSelectedBy, new {@id="cardsLabel"})
+						@Html.DropDownListFor(k => k.CardsSelectedBy,
+							new SelectList(Model.Selection, "Key", "Value"),
+							"Select",
+							new {@class = "register-input white-input"})
+					</div> 
+					<!--end col-md-12-->
+					
+					<!--begin col-md-12-->
+					<div class="col-md-12">
+						<input value="Next" id="submit" class="register-submit" type="button">
+					</div>
+					<!--end col-md-12-->
+				}                        
+				<!--end register form -->
+                                        
+			</div>
+			<!--end col-md-6-->
+                 
+		</div>
+		<!--end row-->
+            
+	</div>
+	<!--end container-->
+        
+</section>
+@section Scripts {
+	<script>
+	$("#TarotTypeSelected").val("");
+
+	function hideQuestion(){
+		$("#QuestionSelected").val("");	
+		$("#QuestionSelected").hide();
+		$("#questionsLabel").hide();
+		$("#submit").hide();
+	}
+	function hideCard(){
+		$("#CardsSelectedBy").val("");
+		$("#CardsSelectedBy").hide();
+		$("#cardsLabel").hide();
+		$("#submit").hide();
+	}
+	hideQuestion();
+	hideCard()
+	
+	
+$("#TarotTypeSelected").change(function() {
+  if ($("#TarotTypeSelected").val() !== ""){
+  		$("#QuestionSelected").show();
+  		$("#questionsLabel").show();
+  	}else
+	{
+		hideQuestion();
+		hideCard()
+	}
+});
+	
+$("#QuestionSelected").change(function() {
+  if ($("#QuestionSelected").val() !== ""){
+		$("#CardsSelectedBy").show();
+		$("#cardsLabel").show();
+	}else
+	{
+		hideCard()
+	}     
+ });
+$("#CardsSelectedBy").change(function() {
+  if ($("#CardsSelectedBy").val() !== ""){
+		$("#submit").show();
+	}else
+	{
+		$("#submit").hide();
+	}     
+ });
+</script>
+
+}

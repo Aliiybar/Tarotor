@@ -64,10 +64,15 @@
                                     </form>
                                     <hr>
                                     <div class="text-center">
+                                        
                                         <a class="small" href="forgot-password.html">Forgot Password?</a>
                                     </div>
                                     <div class="text-center">
-                                        <a class="small" href="register.html">Create an Account!</a>
+                                        @Html.ActionLink("Create an Account!",
+                                            "Register", 
+                                            "Account", 
+                                            new object { },
+                                            new { @class = "small"})
                                     </div>
                                 </div>
                             </div>

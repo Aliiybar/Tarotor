@@ -6,6 +6,12 @@
 }
 
 <h2  localize-content>Content </h2>
+<div> @Html.ActionLink("New Content", "SiteContent", "Admin",  new object { },
+          new { @class = "btn btn-warning btn-sm"})
+     @Html.ActionLink("Content List", "SiteContents", "Admin",  new object { },
+              new { @class = "btn btn-warning btn-sm"})
+</div>
+
 @if (ViewBag.Success != null && ViewBag.Success)
 {
     <div class="card bg-success text-white shadow">
@@ -22,7 +28,7 @@
     <div class="form-row">
         <div class="col">
             @Html.LabelFor(model => model.ContentName)
-            @Html.TextBoxFor(model => model.ContentName, new { @class = "form-control", @placeholder = "Template Name"  })
+            @Html.TextBoxFor(model => model.ContentName, new { @class = "form-control", @placeholder = "Content Name"  })
             @Html.ValidationMessageFor(model => model.ContentName)
         </div>
     </div>
@@ -40,7 +46,7 @@
     <div class="form-row">
         <div class="col">
             @Html.LabelFor(model => model.ContentTitle)
-            @Html.TextBoxFor(model => model.ContentTitle, new { @class = "form-control", @placeholder = "Template Name"  })
+            @Html.TextBoxFor(model => model.ContentTitle, new { @class = "form-control", @placeholder = "Content Title"  })
             @Html.ValidationMessageFor(model => model.ContentTitle)
         </div>
     </div>

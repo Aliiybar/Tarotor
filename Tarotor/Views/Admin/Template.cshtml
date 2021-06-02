@@ -6,6 +6,11 @@
 }
 
 <h2  localize-content>Template </h2>
+<div> @Html.ActionLink("New Template", "Template", "Admin",  new object { },
+          new { @class = "btn btn-warning btn-sm"}) 
+@Html.ActionLink("Template List", "Templates", "Admin",  new object { },
+          new { @class = "btn btn-warning btn-sm"})
+    </div>
 @if (ViewBag.Success != null && ViewBag.Success)
 {
     <div class="card bg-success text-white shadow">
@@ -40,7 +45,7 @@
     <div class="form-row">
         <div class="col">
             @Html.LabelFor(model => model.TemplateSubject)
-            @Html.TextBoxFor(model => model.TemplateSubject, new { @class = "form-control", @placeholder = "Template Name"  })
+            @Html.TextBoxFor(model => model.TemplateSubject, new { @class = "form-control", @placeholder = "Subject"  })
             @Html.ValidationMessageFor(model => model.TemplateSubject)
         </div>
     </div>

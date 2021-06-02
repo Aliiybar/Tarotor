@@ -138,6 +138,140 @@ namespace Tarotor.Migrations
                     b.ToTable("Content");
                 });
 
+            modelBuilder.Entity("Tarotor.Entities.Request", b =>
+                {
+                    b.Property<string>("Id")
+                        .HasColumnType("varchar(255) CHARACTER SET utf8mb4");
+
+                    b.Property<int>("CardsChosenBy")
+                        .HasColumnType("int");
+
+                    b.Property<string>("CommentId")
+                        .HasColumnType("longtext CHARACTER SET utf8mb4");
+
+                    b.Property<string>("Email")
+                        .HasColumnType("longtext CHARACTER SET utf8mb4");
+
+                    b.Property<bool>("IsPaid")
+                        .HasColumnType("tinyint(1)");
+
+                    b.Property<int>("PaymentType")
+                        .HasColumnType("int");
+
+                    b.Property<decimal>("Price")
+                        .HasColumnType("decimal(65,30)");
+
+                    b.Property<int>("Questions")
+                        .HasColumnType("int");
+
+                    b.Property<bool>("QuestionsAnswered")
+                        .HasColumnType("tinyint(1)");
+
+                    b.Property<bool>("QuestionsAsked")
+                        .HasColumnType("tinyint(1)");
+
+                    b.Property<string>("Reference")
+                        .HasColumnType("longtext CHARACTER SET utf8mb4");
+
+                    b.Property<DateTime>("RequestDate")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<int>("TarotType")
+                        .HasColumnType("int");
+
+                    b.Property<string>("UserId")
+                        .HasColumnType("longtext CHARACTER SET utf8mb4");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Request");
+                });
+
+            modelBuilder.Entity("Tarotor.Entities.RequestProfile", b =>
+                {
+                    b.Property<string>("Id")
+                        .HasColumnType("varchar(255) CHARACTER SET utf8mb4");
+
+                    b.Property<DateTime>("BirthDate")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<string>("FirstName")
+                        .HasColumnType("longtext CHARACTER SET utf8mb4");
+
+                    b.Property<string>("Photo")
+                        .HasColumnType("longtext CHARACTER SET utf8mb4");
+
+                    b.Property<string>("RequestId")
+                        .HasColumnType("longtext CHARACTER SET utf8mb4");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("RequestProfile");
+                });
+
+            modelBuilder.Entity("Tarotor.Entities.Response", b =>
+                {
+                    b.Property<string>("Id")
+                        .HasColumnType("varchar(255) CHARACTER SET utf8mb4");
+
+                    b.Property<string>("Comment")
+                        .HasColumnType("longtext CHARACTER SET utf8mb4");
+
+                    b.Property<string>("Commentator")
+                        .HasColumnType("longtext CHARACTER SET utf8mb4");
+
+                    b.Property<string>("RequestId")
+                        .HasColumnType("longtext CHARACTER SET utf8mb4");
+
+                    b.Property<DateTime>("ResponseDate")
+                        .HasColumnType("datetime(6)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Response");
+                });
+
+            modelBuilder.Entity("Tarotor.Entities.ResponseQuestion", b =>
+                {
+                    b.Property<string>("Id")
+                        .HasColumnType("varchar(255) CHARACTER SET utf8mb4");
+
+                    b.Property<string>("Question")
+                        .HasColumnType("longtext CHARACTER SET utf8mb4");
+
+                    b.Property<DateTime>("QuestionDate")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<string>("RequestId")
+                        .HasColumnType("longtext CHARACTER SET utf8mb4");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("ResponseQuestion");
+                });
+
+            modelBuilder.Entity("Tarotor.Entities.ResponseQuestionAnswer", b =>
+                {
+                    b.Property<string>("Id")
+                        .HasColumnType("varchar(255) CHARACTER SET utf8mb4");
+
+                    b.Property<string>("Answer")
+                        .HasColumnType("longtext CHARACTER SET utf8mb4");
+
+                    b.Property<DateTime>("AnswerDate")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<string>("RequestId")
+                        .HasColumnType("longtext CHARACTER SET utf8mb4");
+
+                    b.Property<string>("ResponseQuestionId")
+                        .HasColumnType("longtext CHARACTER SET utf8mb4");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("ResponseQuestionAnswer");
+                });
+
             modelBuilder.Entity("Tarotor.Entities.Role", b =>
                 {
                     b.Property<Guid>("Id")
@@ -165,12 +299,36 @@ namespace Tarotor.Migrations
                     b.ToTable("AspNetRoles");
                 });
 
+            modelBuilder.Entity("Tarotor.Entities.SelectedCard", b =>
+                {
+                    b.Property<string>("Id")
+                        .HasColumnType("varchar(255) CHARACTER SET utf8mb4");
+
+                    b.Property<int>("CardId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("CardName")
+                        .HasColumnType("longtext CHARACTER SET utf8mb4");
+
+                    b.Property<string>("RequestId")
+                        .HasColumnType("varchar(255) CHARACTER SET utf8mb4");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("RequestId");
+
+                    b.ToTable("SelectedCard");
+                });
+
             modelBuilder.Entity("Tarotor.Entities.Smtp", b =>
                 {
                     b.Property<string>("Id")
                         .HasColumnType("varchar(255) CHARACTER SET utf8mb4");
 
                     b.Property<string>("Address")
+                        .HasColumnType("longtext CHARACTER SET utf8mb4");
+
+                    b.Property<string>("FromEmail")
                         .HasColumnType("longtext CHARACTER SET utf8mb4");
 
                     b.Property<string>("Password")
@@ -332,6 +490,18 @@ namespace Tarotor.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("Tarotor.Entities.SelectedCard", b =>
+                {
+                    b.HasOne("Tarotor.Entities.Request", null)
+                        .WithMany("SelectedCards")
+                        .HasForeignKey("RequestId");
+                });
+
+            modelBuilder.Entity("Tarotor.Entities.Request", b =>
+                {
+                    b.Navigation("SelectedCards");
                 });
 #pragma warning restore 612, 618
         }
